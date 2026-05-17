@@ -1,0 +1,18 @@
+# Training dataset (~451 MB) - too large for GitHub, add locally
+data/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
