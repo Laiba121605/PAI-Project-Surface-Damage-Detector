@@ -1,4 +1,0 @@
-Device: cpu
-Surface: wood | epochs=80 lr=0.0005 batch=8 seed=42
-Latest log:  outputs\wood_train.log
-History log: outputs\training_history\wood_20260518_220605.log
