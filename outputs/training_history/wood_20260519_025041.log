@@ -1,0 +1,27 @@
+Device: cpu
+Surface: wood | epochs=100 lr=0.0005 batch=16 seed=42
+Smudge boost: 2.5 | Cracked boost: 1.5
+Mixup alpha: 0.0 | TTA: True
+Dataset sizes -> train: 245  val: 52  test: 55
+Train class counts: {'clean': 81, 'smudged': 80, 'cracked': 84}
+Class weights:      {'clean': 1.008, 'smudged': 2.552, 'cracked': 1.458}
+Input channels: 6
+Total trainable parameters: 1,208,323
+Epoch 001/100 | Train Loss: 1.0212 | Train Acc:  39.6% | Val Loss: 1.0243 | Val Acc:  48.1% | LR: 0.000500
+Epoch 002/100 | Train Loss: 0.9118 | Train Acc:  52.2% | Val Loss: 0.8923 | Val Acc:  65.4% | LR: 0.000500
+Epoch 003/100 | Train Loss: 0.9315 | Train Acc:  48.6% | Val Loss: 0.8290 | Val Acc:  67.3% | LR: 0.000500
+Epoch 004/100 | Train Loss: 0.8805 | Train Acc:  51.8% | Val Loss: 0.8751 | Val Acc:  63.5% | LR: 0.000500
+Epoch 005/100 | Train Loss: 0.8565 | Train Acc:  50.2% | Val Loss: 0.8556 | Val Acc:  50.0% | LR: 0.000500
+Epoch 006/100 | Train Loss: 0.8622 | Train Acc:  51.8% | Val Loss: 0.8469 | Val Acc:  51.9% | LR: 0.000500
+Epoch 007/100 | Train Loss: 0.8635 | Train Acc:  52.7% | Val Loss: 0.8591 | Val Acc:  50.0% | LR: 0.000500
+Epoch 008/100 | Train Loss: 0.8387 | Train Acc:  59.2% | Val Loss: 0.8746 | Val Acc:  57.7% | LR: 0.000500
+Epoch 009/100 | Train Loss: 0.8564 | Train Acc:  54.7% | Val Loss: 0.8055 | Val Acc:  63.5% | LR: 0.000500
+Epoch 010/100 | Train Loss: 0.8248 | Train Acc:  58.4% | Val Loss: 0.7737 | Val Acc:  63.5% | LR: 0.000500
+Epoch 011/100 | Train Loss: 0.8489 | Train Acc:  53.1% | Val Loss: 0.9178 | Val Acc:  50.0% | LR: 0.000500
+Epoch 012/100 | Train Loss: 0.7959 | Train Acc:  57.6% | Val Loss: 0.7760 | Val Acc:  63.5% | LR: 0.000500
+Epoch 013/100 | Train Loss: 0.8139 | Train Acc:  60.4% | Val Loss: 0.7534 | Val Acc:  67.3% | LR: 0.000500
+Epoch 014/100 | Train Loss: 0.8059 | Train Acc:  57.1% | Val Loss: 0.8170 | Val Acc:  55.8% | LR: 0.000500
+Epoch 015/100 | Train Loss: 0.7481 | Train Acc:  65.3% | Val Loss: 0.7832 | Val Acc:  55.8% | LR: 0.000500
+Epoch 016/100 | Train Loss: 0.7922 | Train Acc:  55.5% | Val Loss: 0.8142 | Val Acc:  65.4% | LR: 0.000500
+Epoch 017/100 | Train Loss: 0.7928 | Train Acc:  57.1% | Val Loss: 0.8333 | Val Acc:  65.4% | LR: 0.000500
+Epoch 018/100 | Train Loss: 0.7799 | Train Acc:  63.7% | Val Loss: 0.8373 | Val Acc:  61.5% | LR: 0.000500

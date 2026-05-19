@@ -1,0 +1,98 @@
+Device: cuda
+Surface: tiles | epochs=80 lr=0.001 batch=8 seed=42
+Latest log:  outputs\tiles_train.log
+History log: outputs\training_history\tiles_20260517_224753.log
+Dataset sizes -> train: 235  val: 49  test: 52
+Train class counts: {'clean': 84, 'smudged': 74, 'cracked': 77}
+Class weights:      {'clean': 0.933, 'smudged': 1.059, 'cracked': 1.526}
+Input channels: 6
+Total trainable parameters: 1,208,323
+Epoch 01/80 | Train Loss: 1.0166 | Train Acc:  46.8% | Val Loss: 0.7648 | Val Acc:  69.4% | LR: 0.001000
+Epoch 02/80 | Train Loss: 1.0544 | Train Acc:  46.0% | Val Loss: 0.8098 | Val Acc:  73.5% | LR: 0.001000
+Epoch 03/80 | Train Loss: 1.0268 | Train Acc:  49.4% | Val Loss: 0.8047 | Val Acc:  63.3% | LR: 0.001000
+Epoch 04/80 | Train Loss: 0.9845 | Train Acc:  54.5% | Val Loss: 1.0181 | Val Acc:  69.4% | LR: 0.001000
+Epoch 05/80 | Train Loss: 0.9697 | Train Acc:  49.4% | Val Loss: 0.9224 | Val Acc:  53.1% | LR: 0.001000
+Epoch 06/80 | Train Loss: 0.9856 | Train Acc:  53.2% | Val Loss: 0.8146 | Val Acc:  61.2% | LR: 0.001000
+Epoch 07/80 | Train Loss: 0.9658 | Train Acc:  55.7% | Val Loss: 0.8313 | Val Acc:  65.3% | LR: 0.001000
+Epoch 08/80 | Train Loss: 1.0292 | Train Acc:  49.4% | Val Loss: 0.7896 | Val Acc:  69.4% | LR: 0.001000
+Epoch 09/80 | Train Loss: 0.9578 | Train Acc:  56.2% | Val Loss: 0.8826 | Val Acc:  67.3% | LR: 0.000500
+Epoch 10/80 | Train Loss: 0.9894 | Train Acc:  51.5% | Val Loss: 0.8813 | Val Acc:  63.3% | LR: 0.000500
+Epoch 11/80 | Train Loss: 0.9145 | Train Acc:  52.8% | Val Loss: 0.7928 | Val Acc:  69.4% | LR: 0.000500
+Epoch 12/80 | Train Loss: 1.0052 | Train Acc:  49.8% | Val Loss: 0.7771 | Val Acc:  71.4% | LR: 0.000500
+Epoch 13/80 | Train Loss: 0.9502 | Train Acc:  53.6% | Val Loss: 0.7616 | Val Acc:  69.4% | LR: 0.000500
+Epoch 14/80 | Train Loss: 0.9733 | Train Acc:  49.8% | Val Loss: 0.8398 | Val Acc:  63.3% | LR: 0.000500
+Epoch 15/80 | Train Loss: 0.9244 | Train Acc:  52.3% | Val Loss: 0.8211 | Val Acc:  71.4% | LR: 0.000500
+Epoch 16/80 | Train Loss: 0.9059 | Train Acc:  57.0% | Val Loss: 0.6959 | Val Acc:  73.5% | LR: 0.000500
+Epoch 17/80 | Train Loss: 0.9081 | Train Acc:  60.9% | Val Loss: 0.7968 | Val Acc:  67.3% | LR: 0.000500
+Epoch 18/80 | Train Loss: 0.9295 | Train Acc:  58.3% | Val Loss: 0.8235 | Val Acc:  67.3% | LR: 0.000500
+Epoch 19/80 | Train Loss: 0.9236 | Train Acc:  57.0% | Val Loss: 0.7968 | Val Acc:  71.4% | LR: 0.000500
+Epoch 20/80 | Train Loss: 0.9314 | Train Acc:  57.4% | Val Loss: 0.7948 | Val Acc:  71.4% | LR: 0.000500
+Epoch 21/80 | Train Loss: 0.9117 | Train Acc:  58.3% | Val Loss: 0.7480 | Val Acc:  71.4% | LR: 0.000500
+Epoch 22/80 | Train Loss: 0.9003 | Train Acc:  60.0% | Val Loss: 0.7645 | Val Acc:  67.3% | LR: 0.000500
+Epoch 23/80 | Train Loss: 0.9120 | Train Acc:  57.4% | Val Loss: 0.7884 | Val Acc:  63.3% | LR: 0.000500
+Epoch 24/80 | Train Loss: 0.8814 | Train Acc:  61.3% | Val Loss: 0.7084 | Val Acc:  69.4% | LR: 0.000250
+Epoch 25/80 | Train Loss: 0.8596 | Train Acc:  60.9% | Val Loss: 0.7763 | Val Acc:  67.3% | LR: 0.000250
+Epoch 26/80 | Train Loss: 0.8663 | Train Acc:  61.7% | Val Loss: 0.7643 | Val Acc:  71.4% | LR: 0.000250
+Epoch 27/80 | Train Loss: 0.8984 | Train Acc:  59.6% | Val Loss: 0.7060 | Val Acc:  77.6% | LR: 0.000250
+Epoch 28/80 | Train Loss: 0.8830 | Train Acc:  58.7% | Val Loss: 0.7126 | Val Acc:  69.4% | LR: 0.000250
+Epoch 29/80 | Train Loss: 0.8984 | Train Acc:  60.4% | Val Loss: 0.6642 | Val Acc:  73.5% | LR: 0.000250
+Epoch 30/80 | Train Loss: 0.8583 | Train Acc:  59.6% | Val Loss: 0.6331 | Val Acc:  77.6% | LR: 0.000250
+Epoch 31/80 | Train Loss: 0.8426 | Train Acc:  64.3% | Val Loss: 0.7043 | Val Acc:  75.5% | LR: 0.000250
+Epoch 32/80 | Train Loss: 0.8231 | Train Acc:  65.5% | Val Loss: 0.6601 | Val Acc:  73.5% | LR: 0.000250
+Epoch 33/80 | Train Loss: 0.8652 | Train Acc:  58.3% | Val Loss: 0.6222 | Val Acc:  75.5% | LR: 0.000250
+Epoch 34/80 | Train Loss: 0.8784 | Train Acc:  59.6% | Val Loss: 0.7121 | Val Acc:  61.2% | LR: 0.000250
+Epoch 35/80 | Train Loss: 0.8844 | Train Acc:  59.1% | Val Loss: 0.6505 | Val Acc:  71.4% | LR: 0.000250
+Epoch 36/80 | Train Loss: 0.8666 | Train Acc:  58.3% | Val Loss: 0.6525 | Val Acc:  73.5% | LR: 0.000250
+Epoch 37/80 | Train Loss: 0.8500 | Train Acc:  60.9% | Val Loss: 0.6737 | Val Acc:  75.5% | LR: 0.000250
+Epoch 38/80 | Train Loss: 0.8590 | Train Acc:  61.7% | Val Loss: 0.7493 | Val Acc:  69.4% | LR: 0.000250
+Epoch 39/80 | Train Loss: 0.7809 | Train Acc:  62.1% | Val Loss: 0.6448 | Val Acc:  77.6% | LR: 0.000250
+Epoch 40/80 | Train Loss: 0.8306 | Train Acc:  62.1% | Val Loss: 0.6087 | Val Acc:  75.5% | LR: 0.000250
+Epoch 41/80 | Train Loss: 0.8103 | Train Acc:  62.1% | Val Loss: 0.6622 | Val Acc:  69.4% | LR: 0.000250
+Epoch 42/80 | Train Loss: 0.8409 | Train Acc:  65.1% | Val Loss: 0.6908 | Val Acc:  71.4% | LR: 0.000250
+Epoch 43/80 | Train Loss: 0.7912 | Train Acc:  66.4% | Val Loss: 0.6478 | Val Acc:  71.4% | LR: 0.000250
+Epoch 44/80 | Train Loss: 0.9010 | Train Acc:  54.0% | Val Loss: 0.6919 | Val Acc:  65.3% | LR: 0.000250
+Epoch 45/80 | Train Loss: 0.8344 | Train Acc:  60.4% | Val Loss: 0.6537 | Val Acc:  69.4% | LR: 0.000250
+Epoch 46/80 | Train Loss: 0.7970 | Train Acc:  66.8% | Val Loss: 0.6829 | Val Acc:  61.2% | LR: 0.000250
+Epoch 47/80 | Train Loss: 0.8286 | Train Acc:  64.7% | Val Loss: 0.6310 | Val Acc:  73.5% | LR: 0.000250
+Epoch 48/80 | Train Loss: 0.8375 | Train Acc:  64.3% | Val Loss: 0.7188 | Val Acc:  65.3% | LR: 0.000125
+Epoch 49/80 | Train Loss: 0.8023 | Train Acc:  66.0% | Val Loss: 0.6719 | Val Acc:  67.3% | LR: 0.000125
+Epoch 50/80 | Train Loss: 0.8995 | Train Acc:  63.0% | Val Loss: 0.6275 | Val Acc:  73.5% | LR: 0.000125
+Epoch 51/80 | Train Loss: 0.8069 | Train Acc:  62.1% | Val Loss: 0.6325 | Val Acc:  69.4% | LR: 0.000125
+Epoch 52/80 | Train Loss: 0.7944 | Train Acc:  65.5% | Val Loss: 0.6121 | Val Acc:  71.4% | LR: 0.000125
+Epoch 53/80 | Train Loss: 0.7884 | Train Acc:  65.1% | Val Loss: 0.6075 | Val Acc:  69.4% | LR: 0.000125
+Epoch 54/80 | Train Loss: 0.7862 | Train Acc:  63.8% | Val Loss: 0.6662 | Val Acc:  71.4% | LR: 0.000125
+Epoch 55/80 | Train Loss: 0.7726 | Train Acc:  67.7% | Val Loss: 0.5833 | Val Acc:  75.5% | LR: 0.000125
+Epoch 56/80 | Train Loss: 0.7339 | Train Acc:  70.2% | Val Loss: 0.5978 | Val Acc:  71.4% | LR: 0.000125
+Epoch 57/80 | Train Loss: 0.8201 | Train Acc:  63.0% | Val Loss: 0.6015 | Val Acc:  73.5% | LR: 0.000125
+Epoch 58/80 | Train Loss: 0.7677 | Train Acc:  67.2% | Val Loss: 0.5929 | Val Acc:  71.4% | LR: 0.000125
+Epoch 59/80 | Train Loss: 0.8114 | Train Acc:  66.8% | Val Loss: 0.5831 | Val Acc:  71.4% | LR: 0.000125
+Epoch 60/80 | Train Loss: 0.7770 | Train Acc:  62.6% | Val Loss: 0.5919 | Val Acc:  71.4% | LR: 0.000125
+Epoch 61/80 | Train Loss: 0.7539 | Train Acc:  70.2% | Val Loss: 0.6143 | Val Acc:  67.3% | LR: 0.000125
+Epoch 62/80 | Train Loss: 0.7263 | Train Acc:  70.2% | Val Loss: 0.5542 | Val Acc:  73.5% | LR: 0.000125
+Epoch 63/80 | Train Loss: 0.7386 | Train Acc:  68.9% | Val Loss: 0.5471 | Val Acc:  79.6% | LR: 0.000125
+Epoch 64/80 | Train Loss: 0.7878 | Train Acc:  65.1% | Val Loss: 0.5341 | Val Acc:  73.5% | LR: 0.000125
+Epoch 65/80 | Train Loss: 0.7562 | Train Acc:  69.4% | Val Loss: 0.5501 | Val Acc:  77.6% | LR: 0.000125
+Epoch 66/80 | Train Loss: 0.7891 | Train Acc:  64.3% | Val Loss: 0.5544 | Val Acc:  75.5% | LR: 0.000125
+Epoch 67/80 | Train Loss: 0.7494 | Train Acc:  66.4% | Val Loss: 0.5578 | Val Acc:  75.5% | LR: 0.000125
+Epoch 68/80 | Train Loss: 0.8018 | Train Acc:  65.1% | Val Loss: 0.5711 | Val Acc:  75.5% | LR: 0.000125
+Epoch 69/80 | Train Loss: 0.7226 | Train Acc:  70.2% | Val Loss: 0.5790 | Val Acc:  67.3% | LR: 0.000125
+Epoch 70/80 | Train Loss: 0.7805 | Train Acc:  63.4% | Val Loss: 0.5686 | Val Acc:  71.4% | LR: 0.000125
+Epoch 71/80 | Train Loss: 0.7524 | Train Acc:  64.7% | Val Loss: 0.5678 | Val Acc:  71.4% | LR: 0.000125
+Epoch 72/80 | Train Loss: 0.7692 | Train Acc:  66.8% | Val Loss: 0.5638 | Val Acc:  73.5% | LR: 0.000063
+Epoch 73/80 | Train Loss: 0.7018 | Train Acc:  71.1% | Val Loss: 0.5431 | Val Acc:  71.4% | LR: 0.000063
+Epoch 74/80 | Train Loss: 0.7929 | Train Acc:  65.5% | Val Loss: 0.5294 | Val Acc:  73.5% | LR: 0.000063
+Epoch 75/80 | Train Loss: 0.7504 | Train Acc:  68.5% | Val Loss: 0.5358 | Val Acc:  73.5% | LR: 0.000063
+Epoch 76/80 | Train Loss: 0.7839 | Train Acc:  62.1% | Val Loss: 0.5078 | Val Acc:  83.7% | LR: 0.000063
+Epoch 77/80 | Train Loss: 0.7526 | Train Acc:  65.1% | Val Loss: 0.4866 | Val Acc:  83.7% | LR: 0.000063
+Epoch 78/80 | Train Loss: 0.7700 | Train Acc:  67.7% | Val Loss: 0.5015 | Val Acc:  81.6% | LR: 0.000063
+Epoch 79/80 | Train Loss: 0.6846 | Train Acc:  72.8% | Val Loss: 0.4912 | Val Acc:  83.7% | LR: 0.000063
+Epoch 80/80 | Train Loss: 0.7765 | Train Acc:  68.1% | Val Loss: 0.5245 | Val Acc:  77.6% | LR: 0.000063
+
+Loading best checkpoint: outputs\tiles_best.pth
+
+=== TEST RESULTS: tiles ===
+Test Accuracy: 76.9%
+Per-class accuracy:
+  clean   :  83.3%
+  smudged :  76.5%
+  cracked :  70.6%

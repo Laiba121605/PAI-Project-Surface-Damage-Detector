@@ -16,7 +16,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 from torch.utils.data import DataLoader
 
 from dataset import CLASS_NAMES, SurfaceDataset
-from model import SurfaceCNN
+from model import SurfaceCNN, infer_config_from_state_dict
 
 
 def parse_args() -> argparse.Namespace:
@@ -25,7 +25,32 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--data_dir", type=str, default="data")
     p.add_argument("--output_dir", type=str, default="outputs")
     p.add_argument("--batch_size", type=int, default=16)
+    p.add_argument("--tta", action="store_true",
+                   help="Test-time augmentation: predict on 4 oriented views, "
+                        "average softmax probabilities. Free 1-3pp accuracy gain.")
     return p.parse_args()
+
+
+def softmax(x: torch.Tensor, dim: int) -> torch.Tensor:
+    shifted = x - x.max(dim=dim, keepdim=True).values
+    exp = torch.exp(shifted)
+    return exp / exp.sum(dim=dim, keepdim=True)
+
+
+def predict_with_tta(model, inputs: torch.Tensor) -> torch.Tensor:
+    """Average softmax probabilities over 4 oriented views of each image.
+
+    Views: original, horizontal flip, vertical flip, 180-degree rotation.
+    All 4 are valid orientations for surface photos (no preferred top/bottom).
+    """
+    views = [
+        inputs,
+        torch.flip(inputs, dims=[3]),       # horizontal flip
+        torch.flip(inputs, dims=[2]),       # vertical flip
+        torch.flip(inputs, dims=[2, 3]),    # 180 rotation
+    ]
+    probs_list = [softmax(model(v), dim=1) for v in views]
+    return torch.stack(probs_list).mean(dim=0)
 
 
 def print_confusion(cm: np.ndarray) -> None:
@@ -77,17 +102,24 @@ def main():
     test_loader = DataLoader(test_ds, batch_size=args.batch_size, shuffle=False, num_workers=0)
     print(f"Test set size: {len(test_ds)}")
 
-    sample_tensor, _ = test_ds[0]
-    in_channels = sample_tensor.shape[0]
-    model = SurfaceCNN(num_classes=3, in_channels=in_channels).to(device)
-    model.load_state_dict(torch.load(ckpt_path, map_location=device))
+    state_dict = torch.load(ckpt_path, map_location=device)
+    cfg = infer_config_from_state_dict(state_dict)
+    print(f"Detected model config: {cfg}")
+    model = SurfaceCNN(num_classes=3, **cfg).to(device)
+    model.load_state_dict(state_dict)
     model.eval()
 
+    if args.tta:
+        print("Using TTA (4-view averaging)")
     all_true, all_pred = [], []
     with torch.no_grad():
         for inputs, labels in test_loader:
             inputs = inputs.to(device, non_blocking=True)
-            preds = model(inputs).argmax(dim=1).cpu().numpy()
+            if args.tta:
+                probs = predict_with_tta(model, inputs)
+                preds = probs.argmax(dim=1).cpu().numpy()
+            else:
+                preds = model(inputs).argmax(dim=1).cpu().numpy()
             all_true.extend(labels.numpy().tolist())
             all_pred.extend(preds.tolist())
 

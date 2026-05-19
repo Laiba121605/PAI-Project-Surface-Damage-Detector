@@ -11,7 +11,7 @@ import cv2
 import torch
 
 from dataset import CLASS_NAMES, preprocess
-from model import SurfaceCNN
+from model import SurfaceCNN, infer_config_from_state_dict
 
 
 def softmax(x: torch.Tensor, dim: int) -> torch.Tensor:
@@ -46,9 +46,10 @@ def main():
     tensor = torch.from_numpy(arr).unsqueeze(0)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    in_channels = tensor.shape[1]
-    model = SurfaceCNN(num_classes=3, in_channels=in_channels).to(device)
-    model.load_state_dict(torch.load(ckpt_path, map_location=device))
+    state_dict = torch.load(ckpt_path, map_location=device)
+    cfg = infer_config_from_state_dict(state_dict)
+    model = SurfaceCNN(num_classes=3, **cfg).to(device)
+    model.load_state_dict(state_dict)
     model.eval()
 
     tensor = tensor.to(device)

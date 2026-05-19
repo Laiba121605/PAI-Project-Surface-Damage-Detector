@@ -1,0 +1,11 @@
+Device: cuda
+Surface: tiles | epochs=80 lr=0.001 batch=8 seed=123
+Latest log:  outputs\tiles_seed123_train.log
+History log: outputs\training_history\tiles_seed123_20260517_233822.log
+Dataset sizes -> train: 235  val: 49  test: 52
+Train class counts: {'clean': 84, 'smudged': 74, 'cracked': 77}
+Class weights:      {'clean': 0.933, 'smudged': 1.059, 'cracked': 1.526}
+Input channels: 6
+Total trainable parameters: 1,208,323
+Epoch 01/80 | Train Loss: 1.1033 | Train Acc:  36.6% | Val Loss: 0.9275 | Val Acc:  61.2% | LR: 0.001000
+Epoch 02/80 | Train Loss: 1.0308 | Train Acc:  49.8% | Val Loss: 0.8419 | Val Acc:  61.2% | LR: 0.001000

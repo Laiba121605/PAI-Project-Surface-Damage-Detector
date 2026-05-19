@@ -1,0 +1,49 @@
+Device: cpu
+Surface: wood | epochs=80 lr=0.0005 batch=8 seed=42
+Latest log:  outputs\wood_train.log
+History log: outputs\training_history\wood_20260518_220723.log
+Dataset sizes -> train: 245  val: 52  test: 55
+Train class counts: {'clean': 81, 'smudged': 80, 'cracked': 84}
+Class weights:      {'clean': 1.008, 'smudged': 1.021, 'cracked': 0.972}
+Input channels: 3
+Total trainable parameters: 1,207,459
+Epoch 01/80 | Train Loss: 1.0242 | Train Acc:  49.8% | Val Loss: 0.9299 | Val Acc:  46.2% | LR: 0.000500
+Epoch 02/80 | Train Loss: 0.9773 | Train Acc:  53.5% | Val Loss: 0.8226 | Val Acc:  57.7% | LR: 0.000500
+Epoch 03/80 | Train Loss: 0.9125 | Train Acc:  55.1% | Val Loss: 0.7501 | Val Acc:  63.5% | LR: 0.000500
+Epoch 04/80 | Train Loss: 0.8972 | Train Acc:  57.6% | Val Loss: 0.8682 | Val Acc:  59.6% | LR: 0.000500
+Epoch 05/80 | Train Loss: 0.9019 | Train Acc:  61.6% | Val Loss: 0.7518 | Val Acc:  69.2% | LR: 0.000500
+Epoch 06/80 | Train Loss: 0.9370 | Train Acc:  58.8% | Val Loss: 0.8107 | Val Acc:  59.6% | LR: 0.000500
+Epoch 07/80 | Train Loss: 0.9188 | Train Acc:  57.6% | Val Loss: 0.7318 | Val Acc:  63.5% | LR: 0.000500
+Epoch 08/80 | Train Loss: 0.8410 | Train Acc:  59.2% | Val Loss: 0.7376 | Val Acc:  59.6% | LR: 0.000500
+Epoch 09/80 | Train Loss: 0.8407 | Train Acc:  58.0% | Val Loss: 0.7407 | Val Acc:  71.2% | LR: 0.000500
+Epoch 10/80 | Train Loss: 0.8535 | Train Acc:  58.8% | Val Loss: 0.7394 | Val Acc:  65.4% | LR: 0.000500
+Epoch 11/80 | Train Loss: 0.8761 | Train Acc:  57.1% | Val Loss: 0.7221 | Val Acc:  61.5% | LR: 0.000500
+Epoch 12/80 | Train Loss: 0.8624 | Train Acc:  59.2% | Val Loss: 0.7289 | Val Acc:  67.3% | LR: 0.000500
+Epoch 13/80 | Train Loss: 0.8586 | Train Acc:  60.0% | Val Loss: 0.8001 | Val Acc:  59.6% | LR: 0.000500
+Epoch 14/80 | Train Loss: 0.8819 | Train Acc:  58.0% | Val Loss: 0.6818 | Val Acc:  67.3% | LR: 0.000500
+Epoch 15/80 | Train Loss: 0.8237 | Train Acc:  64.1% | Val Loss: 0.6517 | Val Acc:  71.2% | LR: 0.000500
+Epoch 16/80 | Train Loss: 0.8477 | Train Acc:  60.8% | Val Loss: 0.7213 | Val Acc:  63.5% | LR: 0.000500
+Epoch 17/80 | Train Loss: 0.8078 | Train Acc:  62.9% | Val Loss: 0.7149 | Val Acc:  67.3% | LR: 0.000500
+Epoch 18/80 | Train Loss: 0.8230 | Train Acc:  58.8% | Val Loss: 0.6855 | Val Acc:  65.4% | LR: 0.000500
+Epoch 19/80 | Train Loss: 0.9029 | Train Acc:  58.4% | Val Loss: 0.7197 | Val Acc:  65.4% | LR: 0.000500
+Epoch 20/80 | Train Loss: 0.8020 | Train Acc:  60.8% | Val Loss: 0.6902 | Val Acc:  69.2% | LR: 0.000500
+Epoch 21/80 | Train Loss: 0.8325 | Train Acc:  61.6% | Val Loss: 0.6994 | Val Acc:  67.3% | LR: 0.000500
+Epoch 22/80 | Train Loss: 0.8215 | Train Acc:  64.9% | Val Loss: 0.6839 | Val Acc:  67.3% | LR: 0.000500
+Epoch 23/80 | Train Loss: 0.7676 | Train Acc:  66.5% | Val Loss: 0.6996 | Val Acc:  67.3% | LR: 0.000250
+Epoch 24/80 | Train Loss: 0.7775 | Train Acc:  64.1% | Val Loss: 0.6561 | Val Acc:  71.2% | LR: 0.000250
+Epoch 25/80 | Train Loss: 0.7652 | Train Acc:  63.3% | Val Loss: 0.7188 | Val Acc:  65.4% | LR: 0.000250
+Epoch 26/80 | Train Loss: 0.7903 | Train Acc:  64.9% | Val Loss: 0.6705 | Val Acc:  69.2% | LR: 0.000250
+Epoch 27/80 | Train Loss: 0.8020 | Train Acc:  62.9% | Val Loss: 0.7031 | Val Acc:  67.3% | LR: 0.000250
+Epoch 28/80 | Train Loss: 0.7471 | Train Acc:  63.3% | Val Loss: 0.6757 | Val Acc:  69.2% | LR: 0.000250
+Epoch 29/80 | Train Loss: 0.8033 | Train Acc:  60.4% | Val Loss: 0.6804 | Val Acc:  65.4% | LR: 0.000250
+Epoch 30/80 | Train Loss: 0.6719 | Train Acc:  68.6% | Val Loss: 0.6651 | Val Acc:  69.2% | LR: 0.000250
+Early stopping at epoch 30 (no val_loss improvement for 15 epochs).
+
+Loading best checkpoint: outputs\wood_best.pth
+
+=== TEST RESULTS: wood ===
+Test Accuracy: 63.6%
+Per-class accuracy:
+  clean   :  78.9%
+  smudged :  33.3%
+  cracked :  77.8%

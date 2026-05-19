@@ -1,0 +1,6 @@
+Device: cpu
+Surface: wood | epochs=150 lr=0.0008 batch=8 seed=42
+Smudge boost: 2.0 | Cracked boost: 1.5
+Label smoothing: 0.08 | TTA: True
+Latest log:  outputs\wood_train.log
+History log: outputs\training_history\wood_20260519_013002.log
